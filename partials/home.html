@@ -1,0 +1,172 @@
+<br>
+<div class="panel">
+  <div class="main-panel">
+    <div class="row">
+      <div class="col-xs-4">
+        <img ng-src="{{ localData.user[0].image['60x60'].url }}" class="img-responsive" style="display: inline-block; border-radius: 2em;">
+        <h2 style="font-weight: bold; display: inline-block"> &nbsp; {{ localData.user[0].last_name }} {{ localData.user[0].first_name }}</h2>
+      </div>
+      <div class="col-xs-2 col-xs-offset-1">
+        <h2 class="logo">Pinfluencer</h2>
+      </div>
+      <div class="col-xs-4 col-xs-offset-1">
+        <button class="btn btn-lg btn-danger pull-right" ng-click="refreshToday()" style="margin-top: 10px;">Refresh Today</button>
+      </div>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="panel-body tabs-container">
+
+    <div class="row">
+      <div class="col-xs-3">
+        <button type="button" class="btn btn-lg btn-danger" ng-init="followersCollapsed=false" class="btn btn-default" ng-click="followersCollapsed = !followersCollapsed">Followers</button>
+        <br>
+        <br>
+        <div uib-collapse="followersCollapsed">
+          <div class="list-container">
+
+            <div ng-repeat="f in localData[today].followers">
+              <div class="list-user">
+                <img ng-src="{{ f.image['60x60'].url }}" class="img-responsive" style="display: inline-block">
+
+                <h4 style="display: inline">
+                {{ f.username }}
+                {{ f.last_name }}
+                {{ f.first_name }}
+                </h4>
+              </div>
+
+              <br>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-3">
+        <button type="button" class="btn btn-lg btn-danger" ng-init="followingCollapse=false" class="btn btn-default" ng-click="followingCollapse = !followingCollapse">Following</button>
+        <br>
+        <br>
+        <div uib-collapse="followingCollapse">
+          <div class="list-container">
+            <div ng-repeat="f in localData[today].following">
+              <div class="list-user">
+                <img ng-src="{{ f.image['60x60'].url }}" class="img-responsive" style="display: inline-block">
+
+                <h4 style="display: inline">
+                {{ f.username }}
+                {{ f.last_name }}
+                {{ f.first_name }}
+                </h4>
+              </div>
+
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-3">
+        <button type="button" class="btn btn-lg btn-danger" ng-init="unf=false" class="btn btn-default" ng-click="unf = !unf">Followers lost</button>
+        <br>
+        <br>
+        <div uib-collapse="unf">
+          <div class="list-container">
+              <div ng-repeat="f in unfollowers">
+                <div class="list-user">
+                  <img ng-src="{{ f.image['60x60'].url }}" class="img-responsive" style="display: inline-block">
+  
+                  <h4 style="display: inline">
+                  {{ f.username }}
+                  {{ f.last_name }}
+                  {{ f.first_name }}
+                  </h4>
+                </div>
+  
+                <br>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-3">
+        <button type="button" class="btn btn-lg btn-danger" ng-init="newf=false" class="btn btn-default" ng-click="newf = !newf">New Followers</button>
+        <br>
+        <br>
+        <div uib-collapse="newf">
+          <div class="list-container">
+              <div ng-repeat="f in newFollowers">
+                <div class="list-user">
+                  <img ng-src="{{ f.image['60x60'].url }}" class="img-responsive" style="display: inline-block">
+  
+                  <h4 style="display: inline">
+                  {{ f.username }}
+                  {{ f.last_name }}
+                  {{ f.first_name }}
+                  </h4>
+                </div>
+  
+                <br>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <br><br>
+
+    <div class="row">
+      <div class="col-xs-3">
+        <button type="button" class="btn btn-lg btn-danger" ng-init="who_dont_f_back=false" class="btn btn-default" ng-click="who_dont_f_back = !who_dont_f_back">Who Don't follow you back</button>
+        <br>
+      <br>
+        <div uib-collapse="who_dont_f_back">
+          <div class="list-container">
+              <div ng-repeat="f in noFollowBack">
+                <div class="list-user">
+                  <img ng-src="{{ f.image['60x60'].url }}" class="img-responsive" style="display: inline-block">
+  
+                  <h4 style="display: inline">
+                  {{ f.username }}
+                  {{ f.last_name }}
+                  {{ f.first_name }}
+                  </h4>
+                </div>
+  
+                <br>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-3">
+        <button type="button" class="btn btn-lg btn-danger" ng-init="follow_you_dont_back=false" class="btn btn-default" ng-click="follow_you_dont_back = !follow_you_dont_back">Followers You Don't Follow Back</button>
+        <br>
+        <br>
+        <div uib-collapse="follow_you_dont_back">
+          <div class="list-container">
+              <div ng-repeat="f in followerNoFollow">
+                <div class="list-user">
+                  <img ng-src="{{ f.image['60x60'].url }}" class="img-responsive" style="display: inline-block">
+  
+                  <h4 style="display: inline">
+                  {{ f.username }}
+                  {{ f.last_name }}
+                  {{ f.first_name }}
+                  </h4>
+                </div>
+  
+                <br>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

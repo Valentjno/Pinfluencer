@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="Pinfluencer">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Pinterest-API">
+        <meta name="author" content="Helias,Valentino Merlino">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Pinterest API</title>
+
+        <!-- JavaScript -->
+        <script src="lib/js/jquery.min.js"></script>
+        <script src="lib/js/angular.min.js"></script>
+        <script src="lib/js/angular-ui-router.min.js"></script>
+        <script src="lib/js/angular-animate.min.js"></script>
+        <script src="lib/js/ui-bootstrap.min.js"></script>
+        <script src="lib/js/bootstrap.min.js"></script>
+        <script src="lib/js/sdk.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/routes.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div ui-view></div>
+          </div>
+        </div>
+      </div>
+
+    </body>
+</html>

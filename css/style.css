@@ -1,0 +1,48 @@
+.main-panel {
+  background-color: rgba(189,8,28, 0.75);
+  color: #fff;
+
+  padding: 10px;
+  border-radius: 0.5em;
+}
+
+.tabs-container {
+  background-color: rgba(200, 200, 200, 0.3);
+  border-radius: 1em;
+}
+
+.list-container {
+  background-color: rgba(189,8,28, 0.5);
+
+  padding: 10px;
+  border-radius: 0.5em;
+
+  min-height: 110px;
+
+  max-height: 600px;
+  overflow: auto;
+}
+
+.list-user {
+  padding: 10px;
+  border-radius: 0.5em;
+
+  background-color: rgba(255,255,255,0.8);
+  color: #000;
+}
+
+.list-user img {
+  border-radius: 2em;
+}
+
+@font-face {font-family: "Coral Pen";
+	src: url("../fonts/Coral_Pen_Free.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url("../fonts/Coral_Pen_Free.otf") format("svg");
+}
+
+.logo {
+  font-family: "Coral Pen";
+  font-size: 65px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
